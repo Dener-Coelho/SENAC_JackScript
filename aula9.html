@@ -254,9 +254,48 @@ listaToda.addEventListener("click", (e) => {
 // });
 
 
+// let formulario = document.querySelector("#meu-formulario")
+
+
+
+// formulario.addEventListener("submit", (e)=>{
+// e.preventDefault();
+//      while(formulario.children.length < 3){
+//         let mensagemDeEnvio = document.createElement("p")
+//         mensagemDeEnvio.textContent = "Você enviou o formulário"
+//         mensagemDeEnvio.classList.add("texto-envio")
+//         formulario.appendChild(mensagemDeEnvio)
+//      }
+// })
+
 //desafios
 
 //Tente bloquear o recarregamento de pagina causado pelo Envio (submit) do formulario
+
+let formularioEnviar = document.querySelector("#meu-formulario")
+formularioEnviar.addEventListener("submit",(e) => {
+    e.preventDefault()
+})
+
+
+let linkTeste = document.querySelector("#link-teste");
+linkTeste.addEventListener("click",(e) => {
+    e.preventDefault()
+    
+     
+    if(soUmaVez === true){
+        let naoFunciona = document.createElement("p")
+        naoFunciona.textContent = "Link não funciona"
+        naoFunciona.classList.add("nao-funciona")
+        linkTeste.after(naoFunciona)
+        
+        soUmaVez = false
+    }
+
+    
+       
+})
+
 
 // let formulario = document.querySelector("#meu-formulario");
 // O evento para formulários não é 'click', é 'submit'
